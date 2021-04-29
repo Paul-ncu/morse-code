@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morse code</title>
+  <style>
+    .container {
+      width: 300px;
+      height: 400px;
+      margin: 100px auto;
+      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    .report {
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+    }
+    .content-box {
+      padding: 5px 10px;
+      text-indent: 2em;
+    }
+
+    .info {
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="report">Report</div>
+    <div class="content-box">
+      <div id="content"></div>
+    </div>
+  </div>
+  <div class="info">
+    <button id="delete">delete</button>
+    <button id="clean">clean</button>
+    
+    <div id="time">hello</div>
+  </div>
+  
+  <script src="./js/morse.js"></script>
+  <script>
+    start()
+    document.getElementById('clean').addEventListener('click', function(){
+      sentence = []
+      content.innerText = sentence.join(" ")
+    });
+    document.getElementById('delete').addEventListener('click', function(){
+      sentence.pop()
+      content.innerText = sentence.join(" ")
+    });
+  </script>
+</body>
+</html>
